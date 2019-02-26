@@ -40,7 +40,10 @@ bool Ant::move()
  */
 bool Ant::breed()
 {
-	bool status = true;
+	bool status = false;
+	if(move()){
+		status  = true;
+	}
 	return status;
 }
 /**

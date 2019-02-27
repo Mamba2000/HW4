@@ -28,10 +28,7 @@ Production::Production(int argc, char* argv[]) {
 	int seed = 1;
 	int pause; //blank or 0 means do not pause
 	//time step is like the number of rounds each organism gets to move
-	for(int i = 0; i < sizeof(*argv);i++){
-		int temp;
-		std::stoi (argv[i]) = temp;
-	}
+
 
 }
 /**
@@ -43,7 +40,7 @@ bool Production::runProduction()
 	bool result = true;
 	while(timestepsLeft-- > 0)
 	{
-		//dbs.step;
+
 		//ants.step;
 	}
 	return result;

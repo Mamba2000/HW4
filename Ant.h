@@ -21,7 +21,7 @@ public:
 	Ant();
 	Ant(int r=0, int c = 0);
 	bool move(int r, int c, Grid g, int n);
-	bool breed();
+	void breed();
 	 ~Ant();
 };
 

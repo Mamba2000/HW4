@@ -20,7 +20,7 @@ class Production;
  */
 int main(int argc, char* argv[])
 {//gridSize #doodlebugs #ants #time_steps seed pause
-	std::cout << "!!!Hello the classmates, it's time for fun with C++!!!" << std::endl;
+	std::cout << "!!!Hello the classmates, it's time for suffering with C++!!!" << std::endl;
     Tests2 ts = Tests2();//see page 291
     if(ts.doTests())
 	{

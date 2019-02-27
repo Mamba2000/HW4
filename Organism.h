@@ -7,13 +7,14 @@
 
 #ifndef ORGANISM_H_
 #define ORGANISM_H_
+#include "Grid.h"
 
 class Organism {
 public:
 	Organism();
 	Organism(bool b);
 	bool isPrey();
-	virtual bool move()=0;
+	virtual bool move(int r, int c, Grid g, int n)=0;
 	virtual bool breed()=0;
 	void setAmAnt(bool b);
 	virtual ~Organism();

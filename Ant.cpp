@@ -6,6 +6,7 @@
  */
 
 #include "Ant.h"
+#include "Grid.h"
 /**
  * Creates the ant organism
  */
@@ -32,7 +33,7 @@ Ant::Ant(int r, int c)
 bool Ant::move(int r, int c, Grid g, int n)
 {
 	bool status = true;
-	int ok = new Cell* [3];
+	int ok [4];
 	ok[0] = g.getCellOccupant(r + 1, c);
 	ok[1] = g.getCellOccupant(r - 1, c);
 	ok[2] = g.getCellOccupant(r, c + 1);

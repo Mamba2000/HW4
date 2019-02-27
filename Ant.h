@@ -20,7 +20,7 @@ private:
 public:
 	Ant();
 	Ant(int r=0, int c = 0);
-	virtual bool Ant::move(int r, int c, Grid g, int n);
+	bool move(int r, int c, Grid g, int n);
 	bool breed();
 	 ~Ant();
 };

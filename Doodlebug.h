@@ -9,13 +9,15 @@
 #define DOODLEBUG_H_
 
 #include "Organism.h"
+#include "Grid.h"
+#include "Ant.h"
 
 class Doodlebug: public Organism {
 public:
 	Doodlebug();
-	bool move();
+	bool move(int r, int c, Grid g, int n);
 	bool breed();
-	bool eat();
+	bool eat(occupationStatus a);
 	virtual ~Doodlebug();
 };
 

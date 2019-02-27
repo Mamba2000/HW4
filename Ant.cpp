@@ -46,23 +46,23 @@ bool Ant::move(int r, int c, Grid g, int n)
 	int toMove = rand()%3;
 	while (newRow + newCol == -2) {
 		toMove = rand()%3;
-		if(!ok[0] && !ok[1] && !ok[2] && !ok[3]) {
+		if(ok[0] != empty && ok[1] != empty && ok[2] != empty && ok[3] != empty) {
 			status = false;
 			newRow = -2;
 			newCol = -2;
-		} else if (toMove == 0 && ok[0]) {
+		} else if (toMove == 0 && ok[0] == empty) {
 			newRow = r + 1;
 			newCol = c;
 			status = true;
-		} else if (toMove == 1 && ok[1]) {
+		} else if (toMove == 1 && ok[1] == empty) {
 			newRow = r - 1;
 			newCol = c;
 			status = true;
-		} else if (toMove == 2 && ok[2]) {
+		} else if (toMove == 2 && ok[2] == empty) {
 			newRow = r;
 			newCol = c + 1;
 			status = true;
-		} else if (toMove == 3 && ok[3]) {
+		} else if (toMove == 3 && ok[3] == empty) {
 			newRow = r;
 			newCol = c - 1;
 			status = true;
@@ -79,9 +79,9 @@ bool Ant::move(int r, int c, Grid g, int n)
 bool Ant::breed()
 {
 	bool status = false;
-	if(move()){
-		status  = true;
-	}
+//	if(ant.move()){
+//		status  = true;
+//	}
 	return status;
 }
 /**

@@ -29,9 +29,43 @@ Ant::Ant(int r, int c)
  * Checks to see if the ant has moved positions
  * @return a boolean stating if the ant has moved
  */
-bool Ant::move()
+bool Ant::move(int r, int c, Grid g, int n)
 {
 	bool status = true;
+	int ok = new Cell* [3];
+	ok[0] = g.getCellOccupant(r + 1, c);
+	ok[1] = g.getCellOccupant(r - 1, c);
+	ok[2] = g.getCellOccupant(r, c + 1);
+	ok[3] = g.getCellOccupant(r, c - 1);
+	int newRow = -1;
+	int newCol = -1;
+	int toMove = rand()%3;
+	while (newRow + newCol == -2) {
+		toMove = rand()%3;
+		if(!ok[0] && !ok[1] && !ok[2] && !ok[3]) {
+			status = false;
+			newRow = -2;
+			newCol = -2;
+		} else if (toMove == 0 && ok[0]) {
+			newRow = r + 1;
+			newCol = c;
+			status = true;
+		} else if (toMove == 1 && ok[1]) {
+			newRow = r - 1;
+			newCol = c;
+			status = true;
+		} else if (toMove == 2 && ok[2]) {
+			newRow = r;
+			newCol = c + 1;
+			status = true;
+		} else if (toMove == 3 && ok[3]) {
+			newRow = r;
+			newCol = c - 1;
+			status = true;
+		}
+	}
+
+
 	return status;
 }
 /**

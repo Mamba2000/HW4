@@ -76,13 +76,13 @@ bool Ant::move(int r, int c, Grid g, int n)
  * Checks to see if the organism can breed
  * @return a boolean to see whether the ant can breed
  */
-bool Ant::breed()
+void Ant::breed()
 {
 	bool status = false;
 //	if(ant.move()){
 //		status  = true;
 //	}
-	return status;
+
 }
 /**
  * Deletes the ant function

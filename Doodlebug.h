@@ -16,7 +16,7 @@ class Doodlebug: public Organism {
 public:
 	Doodlebug();
 	bool move(int r, int c, Grid g, int n);
-	bool breed();
+	virtual void breed();
 	bool eat(occupationStatus a);
 	virtual ~Doodlebug();
 };

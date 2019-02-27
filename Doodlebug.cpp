@@ -48,10 +48,9 @@ bool Doodlebug::move(int r, int c, Grid g, int n)
  * Check to see if the doodlebug can breed
  * @return a boolean to see whether the doodlebug can breed or not
  */
-bool Doodlebug::breed()
+void Doodlebug::breed()
 {
 	bool status = true;
-	return status;
 }
 /**
  * Checks to see if the doodlebug can eat

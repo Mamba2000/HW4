@@ -15,7 +15,7 @@ public:
 	Organism(bool b);
 	bool isPrey();
 	virtual bool move(int r, int c, Grid g, int n)=0;
-	virtual bool breed()=0;
+	virtual void breed()=0;
 	void setAmAnt(bool b);
 	virtual ~Organism();
 };

@@ -85,9 +85,9 @@ bool Ant::move(int r, int c, Grid g, int n)
 void Ant::breed()
 {
 	bool status = false;
-	if(move()){
-		status  = true;
-	}
+//	if(move()){
+//		status  = true;
+//	}
 
 }
 /**

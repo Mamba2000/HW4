@@ -7,6 +7,9 @@
 
 #include "Ant.h"
 #include "Grid.h"
+#include "Organism.h"
+#include <cstdlib>
+int rand();
 /**
  * Creates the ant organism
  */

@@ -35,6 +35,7 @@ Ant::Ant(int r, int c)
  */
 bool Ant::move(int r, int c, Grid g, int n)
 {
+	steps_to_breed = 0;
 	bool status = true;
 	int ok [4];
 	ok[0] = g.getCellOccupant(r + 1, c);
@@ -68,14 +69,16 @@ bool Ant::move(int r, int c, Grid g, int n)
 			status = true;
 		}
 	}
-	int steps = 0;
-	if (status){
-		steps ++;
-	}
-	if(steps >= 3){
+	if (status) {
+		g.setCellOccupant(r, c, empty);
+		g.setCellOccupant(newRow, newCol, ant);
+		steps_to_breed ++;
+			if(steps_to_breed >= 3){
 
-	}
 
+
+			}
+	}
 	return status;
 }
 /**
@@ -85,9 +88,9 @@ bool Ant::move(int r, int c, Grid g, int n)
 void Ant::breed()
 {
 	bool status = false;
-//	if(move()){
-//		status  = true;
-//	}
+	//	if(move()){
+	//		status  = true;
+	//	}
 
 }
 /**

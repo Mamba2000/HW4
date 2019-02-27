@@ -18,6 +18,7 @@ public:
 	virtual void breed()=0;
 	void setAmAnt(bool b);
 	virtual ~Organism();
+	int steps_to_breed;
 };
 
 #endif /* ORGANISM_H_ */

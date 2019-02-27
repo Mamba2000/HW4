@@ -8,7 +8,7 @@
 #ifndef CELL_H_
 #define CELL_H_
 
-enum occupationStatus { Empty, Ant, Doodlebug};
+enum occupationStatus { empty, ant, doodlebug};
 
 
 class Cell {

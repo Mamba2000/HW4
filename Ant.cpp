@@ -76,7 +76,6 @@ bool Ant::move(int r, int c, Grid g, int n)
 			if(steps_to_breed >= 3){
 
 
-
 			}
 	}
 	return status;
@@ -88,9 +87,9 @@ bool Ant::move(int r, int c, Grid g, int n)
 void Ant::breed()
 {
 	bool status = false;
-	//	if(move()){
-	//		status  = true;
-	//	}
+	if (steps_to_breed >= 3){
+		Ant(newRow, newCol);
+	}
 
 }
 /**
